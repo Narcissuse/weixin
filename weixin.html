@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>神秘的64px 是否与二维码大小有关？</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+
+	<style>
+	*{
+    -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+    user-selcet:none;
+}
+.img1{
+	width: 260px;
+	height: 260px;
+}
+
+.sp1{
+	width: 260px;
+	height: 260px;
+}
+
+.img2,.sp2{
+	width: 200px;
+	height: 200px;
+}
+
+.img3,.sp3{
+	width: 100px;
+	height: 100px;
+}
+
+div{
+	position: relative;
+	height: 750px;
+}
+
+.img3,.img2,.img1{
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	/*box-shadow: 0 0 0 1px green;*/
+
+}
+
+.clear{
+	clear: both;
+}
+
+span{
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 36px;
+		box-shadow: 0 0 0 1px red;
+
+}
+
+
+	</style>
+</head>
+<body>
+
+提示：iOS 版微信6.2 中实际可识别区域为红框处。<br><br>
+
+查看文章 <a href="http://devework.com/weixin-qrcode-bug2.html">http://devework.com/weixin-qrcode-bug2.html</a> 了解更多。
+
+
+<br>
+<br>
+<div>
+	linkto:taobao.com(260px)
+	<span class="sp1"></span>
+	<img src="http://1.devework.com/test/qrcode.png" alt="" class="img1">
+</div>
+
+
+<div>
+	linkto:baidu.com(200px)
+	<span class="sp2"></span>
+
+	<img src="http://1.devework.com/test/qrcode.png" alt="" class="img2">
+</div>
+
+
+<div>
+	linkto:qq.com (100px)
+	<span class="sp3"></span>
+
+	<img src="http://1.devework.com/test/qrcode.png" alt="" class="img3">
+</div>
+
+</body>
+</html>
